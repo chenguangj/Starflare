@@ -916,7 +916,7 @@ export default function AIPlatformPage() {
                 href="/products"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border-2 border-primary/20 text-foreground font-medium hover:bg-secondary hover:border-primary/40 transition-all duration-300 shadow-soft"
               >
-                See Our Games
+                Explore Our Visions
                 <Sparkles className="w-5 h-5" />
               </a>
             </div>

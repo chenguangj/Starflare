@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Gamepad2, Brain, Sparkles, Shield, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { IsometricScene } from "@/components/test/isometric-scene";
 
 export function HeroSection() {
   return (
@@ -25,12 +26,14 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10 pt-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-center max-w-5xl mx-auto"
-        >
+        <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-16 items-center max-w-7xl mx-auto">
+          {/* Left side - Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center lg:text-left"
+          >
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -50,7 +53,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight mb-6 leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight mb-6 leading-tight"
           >
             <span className="text-foreground">Redefining </span>
             <span className="text-gradient inline-block">
@@ -65,7 +68,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-3xl mx-auto mb-6 leading-relaxed"
+            className="text-base md:text-lg lg:text-xl text-muted-foreground mb-4 leading-relaxed"
           >
             Powering{" "}
             <span className="font-semibold text-primary">20M+ players</span>{" "}
@@ -79,7 +82,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
+            className="text-sm md:text-base text-muted-foreground mb-8 leading-relaxed"
           >
             We combine deep expertise in lightweight game design with cutting-edge AI technology
             to create engaging, culturally-adapted gaming experiences for emerging markets.
@@ -92,7 +95,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start gap-4"
           >
             <Button
               asChild
@@ -122,18 +125,18 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.85, duration: 0.8 }}
-            className="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground"
+            className="mt-8 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs text-muted-foreground"
           >
             <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-primary" />
+              <Shield className="w-3.5 h-3.5 text-primary" />
               <span>Enterprise-grade AI security</span>
             </div>
             <div className="flex items-center gap-2">
-              <Globe className="w-4 h-4 text-primary" />
+              <Globe className="w-3.5 h-3.5 text-primary" />
               <span>10+ languages supported natively</span>
             </div>
             <div className="flex items-center gap-2">
-              <Sparkles className="w-4 h-4 text-primary" />
+              <Sparkles className="w-3.5 h-3.5 text-primary" />
               <span>14.9B tokens processed daily</span>
             </div>
           </motion.div>
@@ -143,7 +146,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="mt-16 grid grid-cols-3 gap-8 max-w-3xl mx-auto"
+            className="mt-10 grid grid-cols-3 gap-4"
           >
             {[
               { value: "20M+", label: "Active Players", sublabel: "Across all titles" },
@@ -155,22 +158,35 @@ export function HeroSection() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
-                className="text-center"
+                className="text-center lg:text-left"
               >
-                <div className="text-3xl md:text-4xl font-bold text-gradient mb-1">
+                <div className="text-2xl md:text-3xl font-bold text-gradient mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm font-medium text-foreground">
+                <div className="text-xs font-medium text-foreground">
                   {stat.label}
                 </div>
-                <div className="text-xs text-muted-foreground mt-0.5">
+                <div className="text-[10px] text-muted-foreground mt-0.5">
                   {stat.sublabel}
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
+
+        {/* Right side - Isometric Scene */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          className="hidden lg:flex items-center justify-center"
+        >
+          <div className="w-full max-w-[500px] h-[450px]">
+            <IsometricScene />
+          </div>
+        </motion.div>
       </div>
+    </div>
     </section>
   );
 }
