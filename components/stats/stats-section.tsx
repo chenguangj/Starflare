@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
-import { Users, Activity, Globe, Languages } from "lucide-react";
+import { Users, Activity, Globe, Globe2 } from "lucide-react";
 
 function CountUp({
   end,
@@ -67,7 +67,7 @@ const stats = [
     description: "Spanning Southeast Asia, South Asia, and the Middle East — with Latin America and North Africa expansion planned for H2 2025.",
   },
   {
-    icon: Languages,
+    icon: Globe2,
     value: 10,
     suffix: "+",
     label: "Supported Languages",

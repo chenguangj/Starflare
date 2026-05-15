@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -44,11 +45,17 @@ export function Navbar() {
           <nav className="flex items-center justify-between h-16 lg:h-20">
             <Link href="/" className="flex items-center gap-3 group">
               <motion.div
-                whileHover={{ rotate: 360, scale: 1.1 }}
+                whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
-                className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary via-accent to-primary bg-[length:200%_200%] animate-gradient flex items-center justify-center shadow-lg"
+                className="w-10 h-10"
               >
-                <Sparkles className="w-5 h-5 text-white" />
+                <Image
+                  src="/gemini-svg.svg"
+                  alt="Starflare"
+                  width={40}
+                  height={40}
+                  className="w-full h-full"
+                />
               </motion.div>
               <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                 Starflare

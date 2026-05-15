@@ -101,7 +101,7 @@ export function HeroSection() {
             >
               <Link href="/products">
                 <Gamepad2 className="w-5 h-5 mr-2" />
-                Explore Our Games
+                Explore Our Vision
               </Link>
             </Button>
             <Button

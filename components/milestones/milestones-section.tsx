@@ -10,7 +10,7 @@ const milestones = [
     icon: Rocket,
     title: "Company Founded",
     description:
-      "Starflare was established in Shenzhen by a team of veteran game developers and AI researchers who shared a conviction: the next billion gamers would come from emerging markets, and AI would be the key to serving them at scale. Our founding thesis was simple — lightweight games designed for low-end devices, enhanced by intelligent systems that personalize every interaction. We started with 8 people, a seed round, and a prototype card game.",
+      "Starflare was established in Thailand by a team of veteran game developers and AI researchers who shared a conviction: the next billion gamers would come from emerging markets, and AI would be the key to serving them at scale. Our founding thesis was simple — lightweight games designed for low-end devices, enhanced by intelligent systems that personalize every interaction. We started with 8 people, a seed round, and a prototype card game.",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
@@ -101,11 +101,13 @@ export function MilestonesSection() {
             understanding.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            In just four years, Starflare grew from an 8-person startup to a global gaming company
-            serving 20 million players. Each milestone below represents not just a number, but a
-            strategic decision that compounded into our current position. Our growth wasn&apos;t accidental —
-            it was the result of disciplined market selection, relentless product iteration, and a
-            willingness to bet early on AI as a core capability rather than a nice-to-have feature.
+            In just four years, Starflare grew from an 8-person startup to a
+            global gaming company serving 20 million players. Each milestone
+            below represents not just a number, but a strategic decision that
+            compounded into our current position. Our growth wasn&apos;t
+            accidental — it was the result of disciplined market selection,
+            relentless product iteration, and a willingness to bet early on AI
+            as a core capability rather than a nice-to-have feature.
           </p>
         </motion.div>
 
@@ -129,7 +131,9 @@ export function MilestonesSection() {
                   }`}
                 >
                   {/* Content card */}
-                  <div className={`lg:w-[calc(50%-2rem)] ${isLeft ? "lg:pr-0" : "lg:pl-0"}`}>
+                  <div
+                    className={`lg:w-[calc(50%-3rem)] ${isLeft ? "lg:pr-8" : "lg:pl-8"}`}
+                  >
                     <motion.div
                       whileHover={{ y: -4, scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
@@ -166,11 +170,11 @@ export function MilestonesSection() {
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 + 0.3, type: "spring" }}
-                    className="hidden lg:flex absolute left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-white shadow-lg z-10"
+                    className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-white shadow-lg z-10"
                   />
 
                   {/* Spacer for the other side */}
-                  <div className="hidden lg:block lg:w-[calc(50%-2rem)]" />
+                  <div className="hidden lg:block lg:w-[calc(50%-3rem)]" />
                 </motion.div>
               );
             })}

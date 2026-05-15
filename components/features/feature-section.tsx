@@ -1,12 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Gamepad2, Swords, Users, TrendingUp, Globe } from "lucide-react";
+import { Sparkles, Gamepad2, Swords, Users, TrendingUp, Globe, Layers, Grid3x3, Shield } from "lucide-react";
 
 const games = [
   {
-    icon: Sparkles,
-    emoji: "🃏",
+    icon: Layers,
     title: "Card Strategy Games",
     description:
       "Core competitive card games with real-time PvP battles, multilingual NPC dialogue, and AI-powered balance tuning.",
@@ -20,8 +19,7 @@ const games = [
     gradient: "from-blue-500 to-cyan-500",
   },
   {
-    icon: Gamepad2,
-    emoji: "🎮",
+    icon: Grid3x3,
     title: "Casual Puzzle",
     description:
       "Lightweight casual games with low barrier to entry and high retention. AI-personalized push notifications boost engagement.",
@@ -36,7 +34,6 @@ const games = [
   },
   {
     icon: Swords,
-    emoji: "⚔️",
     title: "Strategy Battle",
     description:
       "Deep strategy games for competitive players. AI anti-cheat system reduces false positive rate from 5% to 0.5%.",
@@ -53,7 +50,7 @@ const games = [
 
 export function FeatureSection() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-white">
+    <section id="features" className="relative py-24 lg:py-32 overflow-hidden bg-white">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -131,8 +128,8 @@ export function FeatureSection() {
                   <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
                     {/* Left: Icon and title */}
                     <div className="flex-shrink-0">
-                      <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                        {game.emoji}
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${game.gradient} flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                        <game.icon className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                         {game.title}

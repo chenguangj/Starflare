@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, User } from "lucide-react";
 
 const testimonials = [
   {
@@ -12,7 +12,7 @@ const testimonials = [
     extendedContent:
       "Before Starflare's AI platform, we managed translations through a network of freelance translators and a complex spreadsheet system. Every game update meant weeks of coordination. Now, our AI pipeline handles Hindi, Bengali, Tamil, and Telugu simultaneously — and the quality is actually better because it understands gaming context. The cultural adaptation layer catches things human translators sometimes miss, like adjusting humor references that don't translate across Indian regional cultures.",
     rating: 5,
-    avatar: "🇮🇳",
+    gradient: "from-orange-500 to-green-500",
   },
   {
     name: "Sarah Al-Mansouri",
@@ -22,7 +22,7 @@ const testimonials = [
     extendedContent:
       "In the Middle East market, competitive integrity is everything — players here spend significantly on competitive advantages, and they expect a fair playing field. Our previous rule-based system was banning legitimate high-skill players, causing community outrage. Since switching to the AI-based behavioral analysis, we've caught 3x more actual cheaters while reducing wrongful bans by 90%. Player trust scores in our post-match surveys increased from 6.2 to 8.7 out of 10.",
     rating: 5,
-    avatar: "🇦🇪",
+    gradient: "from-emerald-500 to-teal-500",
   },
   {
     name: "Thanawat Pongpat",
@@ -32,7 +32,7 @@ const testimonials = [
     extendedContent:
       "Thai players are very social — they play in groups, share achievements on LINE, and respond to messages that feel personal rather than corporate. Our AI notification system learned this quickly. Instead of generic 'Come back and play!' messages, it generates contextual nudges like 'Your guild completed the raid without you last night — they saved your share of the loot.' The open rate improvement directly translated to a 12% increase in daily active users and measurably higher in-app spending.",
     rating: 5,
-    avatar: "🇹🇭",
+    gradient: "from-red-500 to-white",
   },
   {
     name: "Nguyen Minh Duc",
@@ -40,9 +40,9 @@ const testimonials = [
     content:
       "The dynamic difficulty system keeps players engaged without them even realizing it's working. Retention metrics speak for themselves.",
     extendedContent:
-      "As a game designer, I was initially skeptical about AI adjusting my carefully tuned difficulty curves. But the results are undeniable. The system doesn't override design intent — it works within the parameters we set, making micro-adjustments that keep each player in their flow state. Our Day-30 retention jumped from 18% to 22%, which at our scale means hundreds of thousands more active players. The AI also surfaces insights about where players struggle most, helping me improve the base design for everyone.",
+      "As a game designer, I was initially skeptical about AIng my carefully tuned difficulty curves. But the results are undeniable. The system doesn't override design intent — it works within the parameters we set, making micro-adjustments that keep each player in their flow state. Our Day-30 retention jumped from 18% to 22%, which at our scale means hundreds of thousands more active players. The AI also surfaces insights about where players struggle most, helping me improve the base design for everyone.",
     rating: 5,
-    avatar: "🇻🇳",
+    gradient: "from-red-500 to-yellow-500",
   },
 ];
 
@@ -124,8 +124,8 @@ export function TestimonialsSection() {
 
                 {/* Author */}
                 <div className="flex items-center gap-4 relative z-10">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center text-2xl">
-                    {testimonial.avatar}
+                  <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center shadow-md`}>
+                    <User className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">

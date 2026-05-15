@@ -73,7 +73,7 @@ const techCards = [
 
 export function TechStackSection() {
   return (
-    <section className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-secondary/20 to-white">
+    <section id="tech-stack" className="relative py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-secondary/20 to-white">
       {/* Animated background grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:48px_48px]" />
 

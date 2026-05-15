@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Navbar } from "@/components/navbar/navbar"
 import { Footer } from "@/components/footer/footer"
 import { cn } from "@/lib/utils"
-import { Gamepad2, Puzzle, Swords, Globe, Clock, Languages, Sparkles, Trophy, Users, TrendingUp, Zap, Target, BarChart3, Shield, Brain } from "lucide-react"
+import { Gamepad2, Puzzle, Swords, Globe, Clock, Globe2, Sparkles, Trophy, Users, TrendingUp, Zap, Target, BarChart3, Shield, Brain, Layers } from "lucide-react"
 
 const tabs = [
   { id: "card", label: "Card Strategy", icon: Gamepad2 },
@@ -16,7 +16,7 @@ const tabs = [
 const tabContent = {
   card: {
     title: "Card Strategy Games",
-    emoji: "🃏",
+    icon: Layers,
     description: "Our flagship product line targeting Southeast Asia & Middle East markets. Real-time competitive card battles with deep strategic gameplay that keeps players engaged for months.",
     features: [
       "Real-time PvP matchmaking across regions",
@@ -41,7 +41,7 @@ const tabContent = {
   },
   casual: {
     title: "Casual Puzzle Games",
-    emoji: "🎮",
+    icon: Puzzle,
     description: "Lightweight casual games designed for mass-market appeal. Low barrier to entry with high retention mechanics that turn casual players into daily active users through smart AI personalization.",
     features: [
       "AI-personalized push notifications",
@@ -66,7 +66,7 @@ const tabContent = {
   },
   strategy: {
     title: "Strategy Battle Games",
-    emoji: "⚔️",
+    icon: Swords,
     description: "Deep strategy games for competitive players who enjoy tactical decision-making and long-term progression. Built for the esports-ready generation with AI-powered fair play systems.",
     features: [
       "AI anti-cheat system (false positive: 5% → 0.5%)",
@@ -242,7 +242,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Tabs */}
-      <section className="py-20">
+      <section id="game-categories" className="py-20">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Section header */}
           <motion.div
@@ -289,7 +289,9 @@ export default function ProductsPage() {
             {/* Main card */}
             <div className="bg-card border border-border rounded-2xl p-8 lg:p-12 shadow-soft">
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-5xl">{content.emoji}</span>
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center shadow-md">
+                  <content.icon className="w-8 h-8 text-primary" />
+                </div>
                 <div>
                   <h3 className="text-2xl lg:text-3xl font-bold text-foreground">{content.title}</h3>
                   <span className="text-sm text-primary font-medium">{content.highlight}</span>
@@ -353,7 +355,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Global Operations */}
-      <section className="py-24 border-t border-border relative overflow-hidden">
+      <section id="localization" className="py-24 border-t border-border relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl" />
@@ -379,7 +381,7 @@ export default function ProductsPage() {
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16">
             {[
               { icon: Clock, value: "4 hours", label: "Localization Cycle", sublabel: "Down from 3-5 days" },
-              { icon: Languages, value: "10+", label: "Languages", sublabel: "Simultaneous output" },
+              { icon: Globe2, value: "10+", label: "Languages", sublabel: "Simultaneous output" },
               { icon: Target, value: "95%", label: "Cultural Accuracy", sublabel: "Human-validated" },
               { icon: TrendingUp, value: "40%", label: "Retention Boost", sublabel: "With localized content" },
             ].map((item, index) => (
@@ -420,7 +422,7 @@ export default function ProductsPage() {
                     <span className="text-sm font-bold text-gradient">{market.players}</span>
                   </div>
                   <div className="flex items-center gap-2 mb-3">
-                    <Languages className="w-3.5 h-3.5 text-primary shrink-0" />
+                    <Globe2 className="w-3.5 h-3.5 text-primary shrink-0" />
                     <span className="text-sm text-muted-foreground">{market.languages}</span>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">{market.localization}</p>
@@ -466,7 +468,7 @@ export default function ProductsPage() {
       </section>
 
       {/* AI Technology in Gaming */}
-      <section className="py-24 border-t border-border">
+      <section id="ai-tech" className="py-24 border-t border-border">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -535,7 +537,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Success Metrics */}
-      <section className="py-24 relative overflow-hidden">
+      <section id="success-metrics" className="py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/50 to-transparent" />
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
