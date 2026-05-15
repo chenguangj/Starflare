@@ -170,7 +170,11 @@ export function MilestonesSection() {
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 + 0.3, type: "spring" }}
-                    className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-white shadow-lg z-10"
+                    className={`hidden lg:block absolute ${
+                      isLeft
+                        ? "right-1/2 translate-x-1/2"
+                        : "left-1/2 -translate-x-1/2"
+                    } px-5 top-1/2 -translate-y-1/2 w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent border-4 border-white shadow-lg z-10`}
                   />
 
                   {/* Spacer for the other side */}
