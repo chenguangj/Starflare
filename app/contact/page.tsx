@@ -286,7 +286,7 @@ export default function ContactPage() {
                       General Inquiries
                     </div>
                     <div className="text-sm text-primary mt-1">
-                      contact@starflaretech.xyz
+                      contact@starflaretech.com
                     </div>
                   </div>
                   <div className="p-4 rounded-xl bg-card border border-border">
@@ -294,7 +294,7 @@ export default function ContactPage() {
                       Business Development
                     </div>
                     <div className="text-sm text-primary mt-1">
-                      partnerships@starflaretech.xyz
+                      partnerships@starflaretech.com
                     </div>
                   </div>
                   <div className="p-4 rounded-xl bg-card border border-border">
@@ -302,7 +302,7 @@ export default function ContactPage() {
                       Press & Media
                     </div>
                     <div className="text-sm text-primary mt-1">
-                      press@starflaretech.xyz
+                      press@starflaretech.com
                     </div>
                   </div>
                 </div>
