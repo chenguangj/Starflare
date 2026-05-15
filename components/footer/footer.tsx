@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { Sparkles, Zap, Globe, ArrowUpRight } from "lucide-react";
+import { Sparkles, Zap, Globe, ArrowUpRight, MapPin } from "lucide-react";
 
 const footerLinks = [
   {
@@ -214,9 +214,14 @@ export function Footer() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              &copy; {new Date().getFullYear()} Starflare Technology Company
-              Limited. All rights reserved.
+              &copy; {new Date().getFullYear()} Starflare Technology Company Limited. All rights reserved.
             </p>
+
+            {/* Company Address */}
+            <div className="flex items-center gap-2 text-xs text-muted-foreground">
+              <MapPin className="w-3 h-3 text-primary" />
+              <span>RM 509, 5/F THE CLOUD 111 TUNG CHAU ST TAI KOK TSUI HONG KONG</span>
+            </div>
           </div>
         </motion.div>
       </div>

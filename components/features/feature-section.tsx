@@ -125,28 +125,18 @@ export function FeatureSection() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
+                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-10">
                     {/* Left: Icon and title */}
-                    <div className="flex-shrink-0">
+                    <div className="flex flex-col">
                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${game.gradient} flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                         <game.icon className="w-8 h-8 text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors leading-tight">
                         {game.title}
                       </h3>
-                      <p className="text-muted-foreground font-medium">
-                        {game.description}
-                      </p>
-                    </div>
-
-                    {/* Right: Detailed description */}
-                    <div className="flex-1">
-                      <p className="text-muted-foreground leading-relaxed mb-6">
-                        {game.details}
-                      </p>
 
                       {/* Stats row */}
-                      <div className="flex flex-wrap gap-4">
+                      <div className="flex flex-wrap gap-3 mt-auto">
                         {game.stats.map((stat) => (
                           <div
                             key={stat.label}
@@ -161,6 +151,16 @@ export function FeatureSection() {
                           </div>
                         ))}
                       </div>
+                    </div>
+
+                    {/* Right: Description and details */}
+                    <div className="flex flex-col gap-4">
+                      <p className="text-muted-foreground font-medium leading-relaxed">
+                        {game.description}
+                      </p>
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {game.details}
+                      </p>
                     </div>
                   </div>
                 </div>

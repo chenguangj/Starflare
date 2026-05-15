@@ -28,7 +28,7 @@ const scenarios = [
     id: "coding",
     icon: Code,
     title: "AI Coding & Dev Productivity",
-    subtitle: "200+ engineers across Thailand · Singapore · Bangalore",
+    subtitle: "Hong Kong Headquarters",
     model:
       "Claude Sonnet 4.6 (complex generation) + Haiku 4.5 (fast completion)",
     dailyTokens: "~580M tokens/day",
@@ -224,7 +224,7 @@ export default function AIPlatformPage() {
             >
               <Brain className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-foreground">
-                Powered by Amazon Bedrock & Claude AI
+                Games Make the World Better
               </span>
               <Sparkles className="w-4 h-4 text-accent" />
             </motion.div>

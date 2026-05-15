@@ -22,19 +22,9 @@ import {
 
 const offices = [
   {
-    city: "Thailand",
-    role: "R&D Headquarters",
-    detail: "Core AI & game development team, 150+ engineers",
-  },
-  {
-    city: "Singapore",
-    role: "Southeast Asia Operations",
-    detail: "Regional publishing, partnerships & business development",
-  },
-  {
-    city: "Bangalore",
-    role: "India Engineering Center",
-    detail: "India market operations, localization & QA",
+    city: "Hong Kong",
+    role: "Headquarters",
+    detail: "RM 509, 5/F THE CLOUD 111 TUNG CHAU ST TAI KOK TSUI",
   },
 ];
 

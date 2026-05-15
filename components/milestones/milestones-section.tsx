@@ -132,7 +132,7 @@ export function MilestonesSection() {
                 >
                   {/* Content card */}
                   <div
-                    className={`lg:w-[calc(50%-3rem)] ${isLeft ? "lg:pr-8" : "lg:pl-8"}`}
+                    className={`lg:w-[calc(50%-2.5rem)] ${isLeft ? "lg:pr-10" : "lg:pl-10"}`}
                   >
                     <motion.div
                       whileHover={{ y: -4, scale: 1.02 }}
@@ -174,7 +174,7 @@ export function MilestonesSection() {
                   />
 
                   {/* Spacer for the other side */}
-                  <div className="hidden lg:block lg:w-[calc(50%-3rem)]" />
+                  <div className="hidden lg:block lg:w-[calc(50%-2.5rem)]" />
                 </motion.div>
               );
             })}
